@@ -17,6 +17,7 @@ class CategorieController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var categorySelected: String = "Thriller"
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerView.selectRow(2, inComponent:0, animated:true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -41,6 +42,7 @@ class CategorieController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         ref.child("users").child(userID!).updateChildValues(["categorySelected" : categorySelected])
     }
+    
     @IBAction func logout(_ sender: UIButton) {
         do{
             try Auth.auth().signOut()

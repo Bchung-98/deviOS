@@ -27,19 +27,19 @@ class SigninController: UIViewController, UITextFieldDelegate {
 //FUNCTIONS
     private func setUpLabels(){
         var greenColor = UIColor(red: 68.0/255.0, green: 219.0/255.0, blue: 94.0/255.0, alpha: 1.0).cgColor
-        prenom.layer.borderWidth = 2
+        prenom.layer.borderWidth = 1
         prenom.layer.cornerRadius = 20
         prenom.layer.borderColor = greenColor
-        nom.layer.borderWidth = 2
+        nom.layer.borderWidth = 1
         nom.layer.cornerRadius = 20
         nom.layer.borderColor = greenColor
-        username.layer.borderWidth = 2
+        username.layer.borderWidth = 1
         username.layer.cornerRadius = 20
         username.layer.borderColor = greenColor
-        password.layer.borderWidth = 2
+        password.layer.borderWidth = 1
         password.layer.cornerRadius = 20
         password.layer.borderColor = greenColor
-        email.layer.borderWidth = 2
+        email.layer.borderWidth = 1
         email.layer.cornerRadius = 20
         email.layer.borderColor = greenColor
         

@@ -25,10 +25,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
 //FUNCTIONS
     private func setUpLabels(){
-        usernameLabel.layer.borderWidth = 2
+        usernameLabel.layer.borderWidth = 1
         usernameLabel.layer.cornerRadius = 20
         usernameLabel.layer.borderColor = greenColor
-        passwordLabel.layer.borderWidth = 2
+        passwordLabel.layer.borderWidth = 1
         passwordLabel.layer.cornerRadius = 20
         passwordLabel.layer.borderColor = greenColor
         

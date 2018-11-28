@@ -13,11 +13,12 @@ import FirebaseDatabase
 class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 //OUTLETS
     @IBOutlet weak var hi: UILabel!
+    @IBOutlet weak var pickerview: UIPickerView!
     var time = ["5 min", "10 min", "15 min", "30 min", "45 min", "60 min"]
     var timeSelected: String = "5 min"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        pickerview.selectRow(2, inComponent:0, animated:true)
         if let user = Auth.auth().currentUser {
             let ref = Database.database().reference()
             let userID = Auth.auth().currentUser?.uid

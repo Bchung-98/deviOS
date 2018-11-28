@@ -253,7 +253,7 @@
             </objects>
             <point key="canvasLocation" x="137" y="847"/>
         </scene>
-        <!--Home Controller-->
+        <!--Time Filter-->
         <scene sceneID="IHP-ZL-Y5d">
             <objects>
                 <viewController id="HmR-uJ-r1E" customClass="HomeController" customModule="Lire" customModuleProvider="target" sceneMemberID="viewController">
@@ -265,7 +265,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jwp-RO-AF8">
-                                <rect key="frame" x="55" y="264" width="265" height="108"/>
+                                <rect key="frame" x="55" y="220" width="265" height="108"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bonjour," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnW-iI-74t">
                                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="36"/>
@@ -288,7 +288,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_livre" translatesAutoresizingMaskIntoConstraints="NO" id="123-Ki-IUi">
-                                <rect key="frame" x="122.5" y="94" width="130" height="130"/>
+                                <rect key="frame" x="122.5" y="50" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="Sek-09-J4S"/>
                                     <constraint firstAttribute="height" constant="130" id="xcg-Lf-sTv"/>
@@ -310,7 +310,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTw-tR-ITc">
-                                <rect key="frame" x="55" y="382" width="265" height="125"/>
+                                <rect key="frame" x="55" y="338" width="265" height="125"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYJ-48-JQn">
                                         <rect key="frame" x="0.0" y="0.0" width="265" height="125"/>
@@ -336,9 +336,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BP-GM-Jxe">
-                                <rect key="frame" x="98.5" y="506" width="178" height="36"/>
+                                <rect key="frame" x="107" y="506" width="161" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <state key="normal" title="ajouter une histoire +">
+                                <state key="normal" title="ajouter une histoire">
                                     <color key="titleColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -367,16 +367,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4M1-Nw-fbm"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1JS-0i-gAw"/>
+                    <navigationItem key="navigationItem" title="Time Filter" id="i7f-FK-1tP"/>
                     <connections>
                         <outlet property="hi" destination="lnW-iI-74t" id="KQ6-fK-bZp"/>
+                        <outlet property="pickerview" destination="pYJ-48-JQn" id="aik-Ss-CBW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Fs-iQ-SKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1816.8" y="132.68365817091455"/>
         </scene>
-        <!--Add Story View Controller-->
+        <!--Ajouter une histoire-->
         <scene sceneID="QPs-pk-Nzy">
             <objects>
                 <viewController id="1l1-a4-fBo" customClass="AddStoryViewController" customModule="Lire" customModuleProvider="target" sceneMemberID="viewController">
@@ -387,64 +388,105 @@
                             <imageView userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abstract-geometric-background-with-white-low-poly-3d-surface-waving_hlfcf_3zx_thumbnail-full01_1" translatesAutoresizingMaskIntoConstraints="NO" id="aCi-t4-p4m">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="79I-Ut-sNO">
-                                <rect key="frame" x="245" y="189" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </stepper>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mkp-rG-r4f">
-                                <rect key="frame" x="35" y="365" width="304" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mkp-rG-r4f">
+                                <rect key="frame" x="35" y="325" width="305" height="222"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhI-kO-XP2">
-                                <rect key="frame" x="35" y="188" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aav-Uq-dRN">
+                                <rect key="frame" x="205" y="60" width="135" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFP-MX-a4S">
+                                        <rect key="frame" x="0.0" y="0.0" width="8" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrZ-gm-N1V">
+                                        <rect key="frame" x="12" y="0.0" width="25" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="79I-Ut-sNO">
+                                        <rect key="frame" x="41" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stepperForTime:" destination="1l1-a4-fBo" eventType="valueChanged" id="1C9-aY-QA6"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUW-WT-VJ5">
+                                <rect key="frame" x="62.5" y="577" width="250" height="40"/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="626-kE-vsZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="I5H-Q6-OiB"/>
+                                </constraints>
+                                <color key="tintColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Ajouter">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addStory:" destination="1l1-a4-fBo" eventType="touchUpInside" id="b5R-jG-9Mn"/>
+                                    <segue destination="HmR-uJ-r1E" kind="show" id="byk-Ng-ipQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Titre de l'histoire" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhI-kO-XP2">
+                                <rect key="frame" x="35" y="60" width="125" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bez-4w-cFu"/>
+                                    <constraint firstAttribute="width" constant="125" id="fhF-V2-Uto"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter une histoire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX5-Jk-JVI">
-                                <rect key="frame" x="64" y="99" width="247.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrZ-gm-N1V">
-                                <rect key="frame" x="195" y="193" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hR-HG-ULs">
-                                <rect key="frame" x="55" y="226" width="265" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hR-HG-ULs">
+                                <rect key="frame" x="35" y="99" width="304" height="216"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="iP1-E5-IkD" id="Gsi-Is-8bV"/>
-                                    <outlet property="delegate" destination="iP1-E5-IkD" id="m8M-Oi-cI3"/>
+                                    <outlet property="dataSource" destination="1l1-a4-fBo" id="AQf-fa-BA7"/>
+                                    <outlet property="delegate" destination="1l1-a4-fBo" id="0pU-gb-iZk"/>
                                 </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mkp-rG-r4f" firstAttribute="leading" secondItem="Qhq-aQ-fhQ" secondAttribute="leading" constant="35" id="0tR-i9-bYI"/>
+                            <constraint firstItem="Qhq-aQ-fhQ" firstAttribute="trailing" secondItem="4hR-HG-ULs" secondAttribute="trailing" constant="36" id="2BM-MO-PJY"/>
+                            <constraint firstItem="Qhq-aQ-fhQ" firstAttribute="trailing" secondItem="aav-Uq-dRN" secondAttribute="trailing" constant="35" id="2fi-at-XTy"/>
                             <constraint firstItem="aCi-t4-p4m" firstAttribute="trailing" secondItem="Qhq-aQ-fhQ" secondAttribute="trailing" id="9Pq-w3-vKJ"/>
                             <constraint firstItem="aCi-t4-p4m" firstAttribute="top" secondItem="lmO-YO-Pfx" secondAttribute="top" id="9Sa-N0-2ik"/>
-                            <constraint firstItem="LX5-Jk-JVI" firstAttribute="centerX" secondItem="lmO-YO-Pfx" secondAttribute="centerX" id="B5w-X4-9vP"/>
+                            <constraint firstItem="mkp-rG-r4f" firstAttribute="top" secondItem="4hR-HG-ULs" secondAttribute="bottom" constant="10" id="H0f-xX-tV6"/>
+                            <constraint firstItem="Qhq-aQ-fhQ" firstAttribute="trailing" secondItem="mkp-rG-r4f" secondAttribute="trailing" constant="35" id="IR9-aX-wSS"/>
                             <constraint firstItem="aCi-t4-p4m" firstAttribute="bottom" secondItem="Qhq-aQ-fhQ" secondAttribute="bottom" id="Jzy-ck-WGy"/>
-                            <constraint firstItem="LX5-Jk-JVI" firstAttribute="top" secondItem="Qhq-aQ-fhQ" secondAttribute="top" constant="35" id="U85-bV-R1c"/>
+                            <constraint firstItem="aav-Uq-dRN" firstAttribute="top" secondItem="Qhq-aQ-fhQ" secondAttribute="top" constant="40" id="Lw5-Ko-LcF"/>
+                            <constraint firstItem="Qhq-aQ-fhQ" firstAttribute="bottom" secondItem="KUW-WT-VJ5" secondAttribute="bottom" constant="50" id="PgN-0v-VOb"/>
+                            <constraint firstItem="KUW-WT-VJ5" firstAttribute="centerX" secondItem="lmO-YO-Pfx" secondAttribute="centerX" id="Pwa-dE-ICC"/>
+                            <constraint firstItem="KUW-WT-VJ5" firstAttribute="top" secondItem="mkp-rG-r4f" secondAttribute="bottom" constant="30" id="SjQ-b2-WPN"/>
+                            <constraint firstItem="4hR-HG-ULs" firstAttribute="leading" secondItem="Qhq-aQ-fhQ" secondAttribute="leading" constant="35" id="VA4-Tk-XGe"/>
                             <constraint firstItem="aCi-t4-p4m" firstAttribute="leading" secondItem="Qhq-aQ-fhQ" secondAttribute="leading" id="Zlf-tf-6Wf"/>
+                            <constraint firstItem="BhI-kO-XP2" firstAttribute="top" secondItem="Qhq-aQ-fhQ" secondAttribute="top" constant="40" id="cUi-CT-u9v"/>
+                            <constraint firstItem="4hR-HG-ULs" firstAttribute="top" secondItem="aav-Uq-dRN" secondAttribute="bottom" constant="10" id="rqV-pH-RqY"/>
+                            <constraint firstItem="BhI-kO-XP2" firstAttribute="leading" secondItem="4hR-HG-ULs" secondAttribute="leading" id="wdb-kl-fAP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qhq-aQ-fhQ"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Ajouter une histoire" id="hdR-GP-KMc"/>
+                    <connections>
+                        <outlet property="categoryStory" destination="4hR-HG-ULs" id="Lkh-gc-LYA"/>
+                        <outlet property="contentStory" destination="mkp-rG-r4f" id="CqK-eQ-8lL"/>
+                        <outlet property="timeStory" destination="dFP-MX-a4S" id="cyI-tI-eTF"/>
+                        <outlet property="titleStory" destination="BhI-kO-XP2" id="Bhp-WQ-2rb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwr-zl-rtc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2220" y="846.9265367316342"/>
         </scene>
-        <!--Categorie Controller-->
+        <!--Category Filter-->
         <scene sceneID="4C7-e4-4ag">
             <objects>
                 <viewController id="iP1-E5-IkD" customClass="CategorieController" customModule="Lire" customModuleProvider="target" sceneMemberID="viewController">
@@ -456,26 +498,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_livre" translatesAutoresizingMaskIntoConstraints="NO" id="uqH-93-x42">
-                                <rect key="frame" x="122.5" y="94" width="130" height="130"/>
+                                <rect key="frame" x="122.5" y="50" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="Gne-R2-Uvd"/>
                                     <constraint firstAttribute="width" constant="130" id="WNj-7e-8Cj"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choisissez une" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxy-Sc-GwZ">
-                                <rect key="frame" x="90.5" y="269" width="194.5" height="36"/>
+                                <rect key="frame" x="90.5" y="225" width="194.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="catégorie : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilv-Oe-N3z" userLabel="catégorie :">
-                                <rect key="frame" x="90.5" y="304" width="142" height="36"/>
+                                <rect key="frame" x="90.5" y="260" width="142" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBP-a3-5MW">
-                                <rect key="frame" x="55" y="360" width="265" height="125"/>
+                                <rect key="frame" x="55" y="316" width="265" height="125"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMh-6p-cB8">
                                         <rect key="frame" x="0.0" y="0.0" width="265" height="125"/>
@@ -517,9 +559,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEu-o8-fZd">
-                                <rect key="frame" x="98.5" y="506" width="178" height="36"/>
+                                <rect key="frame" x="107" y="506" width="161" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <state key="normal" title="ajouter une histoire +">
+                                <state key="normal" title="ajouter une histoire">
                                     <color key="titleColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -550,6 +592,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mAv-m9-jOR"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Category Filter" id="o6h-dc-QFD"/>
                     <connections>
                         <outlet property="pickerView" destination="YMh-6p-cB8" id="5z3-rZ-mTd"/>
                     </connections>
@@ -558,7 +601,7 @@
             </objects>
             <point key="canvasLocation" x="2629.5999999999999" y="130.88455772113943"/>
         </scene>
-        <!--Stories Table View Controller-->
+        <!--Histoires-->
         <scene sceneID="fhw-kb-gZ6">
             <objects>
                 <tableViewController storyboardIdentifier="ListStory" id="Raa-ye-Y90" customClass="StoriesTableViewController" customModule="Lire" customModuleProvider="target" sceneMemberID="viewController">
@@ -629,6 +672,7 @@
                             <outlet property="delegate" destination="Raa-ye-Y90" id="DFp-rk-wFW"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Histoires" id="t6s-Jf-xM0"/>
                     <connections>
                         <outlet property="tableview" destination="qu8-4b-418" id="u4W-yf-FHb"/>
                     </connections>
@@ -716,7 +760,8 @@
         <image name="logo_livre" width="326" height="325"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V8L-aD-HWb"/>
+        <segue reference="TgZ-Nn-FrW"/>
+        <segue reference="byk-Ng-ipQ"/>
         <segue reference="uXl-C4-LMc"/>
     </inferredMetricsTieBreakers>
 </document>
