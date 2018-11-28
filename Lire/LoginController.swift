@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //OUTLETS
     @IBOutlet weak var usernameLabel: UITextField!
     @IBOutlet weak var passwordLabel: UITextField!
+    var red = UIColor(red: 1, green: 0, blue: 0, alpha: 1).cgColor
+    var greenColor = UIColor(red: 68.0/255.0, green: 219.0/255.0, blue: 94.0/255.0, alpha: 1.0).cgColor
     
 //PROPERTIES
     override func viewDidLoad() {
@@ -23,7 +25,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
 //FUNCTIONS
     private func setUpLabels(){
-        var greenColor = UIColor(red: 68.0/255.0, green: 219.0/255.0, blue: 94.0/255.0, alpha: 1.0).cgColor
         usernameLabel.layer.borderWidth = 2
         usernameLabel.layer.cornerRadius = 20
         usernameLabel.layer.borderColor = greenColor
@@ -56,12 +57,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if usernameLabel.text != "" && passwordLabel.text != ""{
             Auth.auth().signIn(withEmail: usernameLabel.text!, password: passwordLabel.text!){(authResult, error) in
                 if error != nil {
-                    print(error.debugDescription)
+                    
+                    self.usernameLabel.layer.borderColor = self.red
+                    self.passwordLabel.layer.borderColor = self.red
                 }else{
                     self.performSegue(withIdentifier: "goToHome", sender: self)
+                    self.usernameLabel.layer.borderColor = self.greenColor
+                    self.passwordLabel.layer.borderColor = self.greenColor
                 }
             }
-            
         }
     }
     

@@ -12,23 +12,6 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseFirestore
 
-class Story {
-    let auteur: String
-    let categorie: String
-    let contenu: String
-    let temps: Int
-    let titre: String
-    
-    init(apiStory : NSDictionary) {
-        self.auteur = apiStory["author"] as! String
-        self.categorie = apiStory["category"] as! String
-        self.contenu = apiStory["content"] as! String
-        self.temps = apiStory["time"] as! Int
-        self.titre = apiStory["title"] as! String
-    }
-}
-
-
 class StoriesTableViewController: UITableViewController{
    
     var allMyStories: [Story] = [Story]()

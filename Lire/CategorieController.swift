@@ -17,7 +17,6 @@ class CategorieController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var categorySelected: String = "Thriller"
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(time)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -42,5 +41,12 @@ class CategorieController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         ref.child("users").child(userID!).updateChildValues(["categorySelected" : categorySelected])
     }
-    
+    @IBAction func logout(_ sender: UIButton) {
+        do{
+            try Auth.auth().signOut()
+            dismiss(animated: true, completion: nil)
+        } catch {
+            print("impossible de déconnecter l'utilisateur")
+        }
+    }
 }

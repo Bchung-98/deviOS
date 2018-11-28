@@ -24,12 +24,9 @@ class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             ref.child("users").child(userID!).observeSingleEvent(of: .value){ (snapshot) in
                 let value = snapshot.value as? NSDictionary
-                
                 let username = value?["username"] as? String ?? "no username"
-                
                 self.hi.text = "Bonjour, " + username
             }
-            
         } else {
             fatalError("Aucun utilisateur est connecté !")
         }
@@ -58,4 +55,15 @@ class HomeController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         ref.child("users").child(userID!).updateChildValues(["timeSelected" : timeSelected])
         
     }
+    
+    @IBAction func Logout(_ sender: UIButton) {
+        do{
+            try Auth.auth().signOut()
+            dismiss(animated: true, completion: nil)
+        } catch {
+            print("impossible de déconnecter l'utilisateur")
+        }
+        
+    }
+    
 }

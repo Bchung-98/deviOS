@@ -20,6 +20,8 @@
 		930A173821A767C600975B8E /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A173721A767C600975B8E /* StoriesTableViewController.swift */; };
 		930A173A21A7916100975B8E /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A173921A7916100975B8E /* StoryTableViewCell.swift */; };
 		934ED8C721AB248500B96244 /* DetailStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934ED8C621AB248500B96244 /* DetailStoryViewController.swift */; };
+		93A0B5F721AEB5C8007577D2 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A0B5F621AEB5C8007577D2 /* Story.swift */; };
+		93A0B5F921AEC5AC007577D2 /* AddStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A0B5F821AEC5AC007577D2 /* AddStoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		930A173721A767C600975B8E /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
 		930A173921A7916100975B8E /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
 		934ED8C621AB248500B96244 /* DetailStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStoryViewController.swift; sourceTree = "<group>"; };
+		93A0B5F621AEB5C8007577D2 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		93A0B5F821AEC5AC007577D2 /* AddStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +89,12 @@
 			isa = PBXGroup;
 			children = (
 				930A171D21A5E6F900975B8E /* AppDelegate.swift */,
+				93A0B5F621AEB5C8007577D2 /* Story.swift */,
 				930A171F21A5E6F900975B8E /* LoginController.swift */,
 				930A173321A6257C00975B8E /* SigninController.swift */,
 				930A173121A6254600975B8E /* HomeController.swift */,
 				930A173521A7675600975B8E /* CategorieController.swift */,
+				93A0B5F821AEC5AC007577D2 /* AddStoryViewController.swift */,
 				930A173721A767C600975B8E /* StoriesTableViewController.swift */,
 				930A173921A7916100975B8E /* StoryTableViewCell.swift */,
 				934ED8C621AB248500B96244 /* DetailStoryViewController.swift */,
@@ -252,12 +258,14 @@
 			files = (
 				930A173821A767C600975B8E /* StoriesTableViewController.swift in Sources */,
 				930A172021A5E6F900975B8E /* LoginController.swift in Sources */,
+				93A0B5F921AEC5AC007577D2 /* AddStoryViewController.swift in Sources */,
 				930A173621A7675600975B8E /* CategorieController.swift in Sources */,
 				930A173421A6257C00975B8E /* SigninController.swift in Sources */,
 				930A171E21A5E6F900975B8E /* AppDelegate.swift in Sources */,
 				934ED8C721AB248500B96244 /* DetailStoryViewController.swift in Sources */,
 				930A173221A6254600975B8E /* HomeController.swift in Sources */,
 				930A173A21A7916100975B8E /* StoryTableViewCell.swift in Sources */,
+				93A0B5F721AEB5C8007577D2 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
